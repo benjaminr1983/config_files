@@ -1,0 +1,13 @@
+# list of bash aliases
+alias ls='ls -la --color=auto'
+alias lsg='ls -la | grep'
+alias cat='bat'
+alias q='exit'
+alias c='clear'
+alias h='history'
+alias p='bat'
+alias pd='pwd'
+alias t='time'
+alias k='kill'
+alias 0='/dev/null'
+alias acpy='source venv/bin/activate'
