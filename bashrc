@@ -24,10 +24,31 @@ fi
 shopt -s checkwinsize
 
 ## History
-#  don't put duplicates in the history
-HISTCONTROL=ignoreboth
+#  don't put duplicates in the history an delete existing duplicates
+#  don't put anything in history that starts with a space
+export HISTCONTROL="erasedups":"ignorespace"
 #  apend to the history file, do'nt overwrite it
 shopt -s histappend
 #  historylength
 HISTSIZE=1000
 HISTFILESIZE=2000
+
+# do not print the directories with pushd/popd
+pushd () {
+    command pushd "$@" > /dev/null
+}
+popd () {
+    command popd "$@" > /dev/null
+}
+
+# keychain
+keychain ~/.ssh/github
+. ~/.keychain/$HOSTNAME-sh 
+
+# emacsserver
+_emacs=$(pgrep emacs)
+if [[ "$_emacs" -gt 0 ]];
+    then : 
+    else emacs_server
+fi
+
