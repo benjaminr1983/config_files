@@ -1,0 +1,17 @@
+[Unit]
+Description= ssh key agent
+
+[Service]
+Type=simple
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+# display required for ssh-askpass to work
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+
+[Install]
+WantedBy=default.target
+
+# save to ~/.config/systemd/user/ssh-agent.service
+# bashrc
+# add SSH_AUTH_SOCKET="$XDG_RUNTIME_DIR/ssh-agent.service"
+# enable and start the service with the --userflag
