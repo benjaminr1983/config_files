@@ -1,4 +1,1 @@
 # list of bash_functions
-emacs_server(){
-    /usr/bin/emacs --daemon &
-}

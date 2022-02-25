@@ -71,10 +71,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>                                              
 nnoremap <C-x> :w !python<CR>                                                       "execute python"
 " }}}
 
-" org_mode-----------------------------------{{{
-
-" }}}
-"
 " vim_scripts--------------------------------{{{
 if filereadable(expand("~/.vim_function"))
     source ~/.vim_function

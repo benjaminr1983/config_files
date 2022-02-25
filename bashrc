@@ -4,8 +4,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='\[\e[31m[\t] \[\e[35m\[\e[1m\][\w]\] $\n \[\e[93m\u@\h \[\e[92m\[\e[1m\]>>>  \]\[\e[0m\]'
-
+# different PS1 for root and user
+if [[ $(id -u) -eq 0 ]];then
+    # PS1 for root
+    PS1='\[\e[1;32m\][\@]\[\e[1;37m\][\u@\h]\[\e[1;36m\][\w]\n \[\e[32m\][>_] \] \e[0;31m\]'
+else
+    # PS1 for normal users
+    PS1='\[\e[1;36m\][\@]\[\e[1;35m\][\u@\h]\[\e[1;32m\][\w]\n \[\e[1;34m\][>_] \] \e[0;33m\]'
+fi
 ## Basic Settings
 #  standard editor
 export EDITOR='vim'
@@ -32,23 +38,6 @@ shopt -s histappend
 #  historylength
 HISTSIZE=1000
 HISTFILESIZE=2000
-
-# do not print the directories with pushd/popd
-pushd () {
-    command pushd "$@" > /dev/null
-}
-popd () {
-    command popd "$@" > /dev/null
-}
-
-# keychain
-keychain ~/.ssh/github
-. ~/.keychain/$HOSTNAME-sh 
-
-# emacsserver
-_emacs=$(pgrep emacs)
-if [[ "$_emacs" -gt 0 ]];
-    then : 
-    else emacs_server
-fi
+# ssh_agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 

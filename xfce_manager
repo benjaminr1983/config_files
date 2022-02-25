@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# a script that determines in which workspace an application starts it is required that you have wmctrl installed for this
+
+case $1 in
+firefox)        wmctrl -s 0
+                /usr/bin/firefox;;
+chrome)         wmctrl -s 0
+                /usr/bin/chromium;;
+term)           wmctrl -s 1
+                /usr/bin/terminator;;
+virtual_studio) wmctrl -s 1
+                /usr/bin/vscodium;;
+virtual_box)    wmctrl -s 1
+                /usr/bin/virtualbox;;
+emacsclient)    wmctrl -s 1
+                /usr/bin/emacsclient;;
+signal)         wmctrl -s 2
+                /usr/bin/signal-desktop;;
+thunderbird)    wmctrl -s 2
+                /usr/bin/thunderbird;;
+thunar)         wmctrl -s 3
+                /usr/bin/thunar;;
+esac

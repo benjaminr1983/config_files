@@ -20,10 +20,10 @@ Plugin 'mbbill/undotree'
 Plugin 'tpope/vim-speeddating'                                                  
 " NERDTRee                                                                      
 Plugin 'preservim/nerdtree'                                                     
-                                                                                 
 " git_flag for NERDTree                                                         
 Plugin 'Xuyuanp/nerdtree-git-plugin'                                            
-
+" org_mode
+Plugin 'jceb/vim-orgmode'
 " all Plugins are loaded                                                        
 call vundle#end()   
 
