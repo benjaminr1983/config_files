@@ -267,6 +267,10 @@
     :hook (dired-mode . all-the-icons-dired-mode))
 #+end_src
 
+** backup
+#+begin_src emacs-lisp
+(setq backup-directory-alist `(("." . "~/.emacs.d/backup")))
+#+end_src
 * development
 ** languages
 *** server
@@ -328,6 +332,13 @@
     (dap-go-setup))
 #+end_src
 
+*** yaml
+#+begin_src emacs-lisp
+    (use-package yaml-mode
+      :mode "\\.yml\\'"
+      :hook (yaml-mode . lsp-deferred))
+#+end_src
+
 *** css-mode
 #+begin_src emacs-lisp
   (use-package css-mode
@@ -384,8 +395,8 @@
     :bind-keymap
     ("C-c p" . projectile-command-map)
     :init
-    (when (file-directory-p "~/git_hub_projects")
-      (setq projectile-project-search-path '("~/git_hub_projects")))
+    (when (file-directory-p "~/projects")
+      (setq projectile-project-search-path '("~/projects")))
     (setq projectile-switch-project-action #'projectile-dired))
   (use-package counsel-projectile                                   ; ivy_integration
     :config (counsel-projectile-mode))

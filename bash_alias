@@ -1,9 +1,7 @@
 # list of bash aliases
-alias ls='ls -la --color=auto'
-alias lsg='ls -la | grep'
 alias cat='bat'
 alias h='history'
-alias p='pwd'
 alias t='time'
 alias 0='/dev/null'
 alias e='emacsclient -c'
+alias ls='ls --color=auto'

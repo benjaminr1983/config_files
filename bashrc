@@ -41,3 +41,13 @@ HISTFILESIZE=2000
 # ssh_agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
+## go_path
+# goroot_dir
+export GOROOT=/usr/lib/go
+export PATH=$PATH:$GOROOT/bin
+# go_path_global
+export GOPATH=$HOME/golib
+export PATH=$PATH:/$GOPATH/bin
+# go_path_workstation
+export GOPATH=$GOPATH:$HOME/ws
+
