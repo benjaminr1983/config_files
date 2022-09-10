@@ -408,7 +408,6 @@
       :commands (magit-status magit-get-current-branch)
       :custom 
       (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
-      (exec-path-from-shell-copy-env "SSH_AUTH_SOCK"))
 #+end_src
 
 *** forge
