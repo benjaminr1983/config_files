@@ -10,7 +10,7 @@
       (variable-pitch-mode 1)
       (visual-line-mode 1))
   #+end_src
-  
+
 *** layout
 #+begin_src emacs-lisp
   (defun org-mode-visual-fill ()

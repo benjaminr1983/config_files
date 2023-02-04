@@ -41,6 +41,11 @@ HISTFILESIZE=2000
 # ssh_agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
+
+## sway
+if [ "$(tty)" = "/dev/tty1" ]; then
+       exec dbus-run-session sway	
+fi
 ## go_path
 # goroot_dir
 export GOROOT=/usr/lib/go
