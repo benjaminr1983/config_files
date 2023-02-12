@@ -761,8 +761,8 @@ key_bindings:
   - { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown  }
   - { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop,    }
   - { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom  }
-  - { key: N,         mods: Shift,   mode: ~Alt,        action: CreateNewWindow }
-  - { key: S,         mods: Shift,   mode: ~Alt,        action: SpawnNewInstance}
+  - { key: N,         mods: Control, mode: ~Alt,        action: CreateNewWindow }
+  - { key: S,         mods: Control, mode: ~Alt,        action: SpawnNewInstance}
 
   # Vi Mode
   #- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
