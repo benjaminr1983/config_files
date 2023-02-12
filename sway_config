@@ -50,9 +50,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 350
 # Example configuration:
 #
  exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'swaylock -f -c 000000'
+          timeout 600 'swaylock -f -s fit -i /home/exar/Pictures/01_linux/cheat_sheet.jpg' \
+          timeout 1800 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          before-sleep 'swaylock -f -s fit -i /home/exar/Pictures/01_linux/cheat_sheet.jpg'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -81,10 +81,15 @@ input * accel_profile flat
     # Start a terminal
     bindsym $mod+Return exec $term
     # start browser 
-    bindsym $mod+$mod2+b exec $web
+    bindsym $mod2+b exec $web
     # start email   
-    bindsym $mod+$mod2+m exec $mail
-
+    bindsym $mod2+m exec $mail
+    # file explorer
+    bindsym $mod2+e exec thunar
+    # shutdown
+    bindsym $mod2+s exec shutdown now
+    # reboot
+    bindsym $mod2+r exec reboot now
     # Kill focused window
     bindsym $mod+x kill
 
