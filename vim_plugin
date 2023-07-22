@@ -11,7 +11,7 @@ Plugin 'junegunn/fzf'
 " auto-pairs                                                                    
 Plugin 'jiangmiao/auto-pairs'                                                   
 " auto_completion                                                               
-Plugin 'ycm-core/YouCompleteMe'                                                 
+" Plugin 'ycm-core/YouCompleteMe'                                                 
 " colorscheme_gruvbox                                                           
 Plugin 'gruvbox-community/gruvbox'                                              
 " undotree                                                                      

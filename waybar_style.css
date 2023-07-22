@@ -278,3 +278,8 @@ label:focus {
 #scratchpad.empty {
 	background-color: transparent;
 }
+
+image {
+    margin-left: 25px;
+    margin-right: 25px;
+}

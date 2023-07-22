@@ -11,7 +11,8 @@ ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
 [Install]
 WantedBy=default.target
 
-# save to ~/.config/systemd/user/ssh-agent.service
+# location ~/.config/systemd/user/ssh-agent.service
+# location ~/.config/systemd/user/default.target.wants/ssh-agent.service
 # bashrc
 # add SSH_AUTH_SOCKET="$XDG_RUNTIME_DIR/ssh-agent.service"
 # enable and start the service with the --userflag

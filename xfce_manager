@@ -9,10 +9,6 @@ brave)          wmctrl -s 0
                 /usr/bin/brave;;
 term)           wmctrl -s 1
                 /usr/bin/alacritty;;
-virtual_box)    wmctrl -s 1
-                /usr/bin/virtualbox;;
-signal)         wmctrl -s 2
-                /usr/bin/signal-desktop;;
 thunderbird)    wmctrl -s 2
                 /usr/bin/thunderbird;;
 spotify)        wmctrl -s 2

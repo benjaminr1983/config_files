@@ -17,3 +17,5 @@ Restart=on-failure
 
 [Install]
 WantedBy=default.target
+# location ~/.config/systemd/user/emacs.service
+# location ~/.config/systemd/user/default.target.wants/emacs.service
