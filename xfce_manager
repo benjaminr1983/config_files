@@ -6,13 +6,13 @@ case $1 in
 firefox)        wmctrl -s 0
                 /usr/bin/firefox;;
 brave)          wmctrl -s 0
-                /usr/bin/brave;;
+                /var/lib/flatpak/exports/bin/com.brave.Browser;;
 term)           wmctrl -s 1
                 /usr/bin/alacritty;;
 thunderbird)    wmctrl -s 2
                 /usr/bin/thunderbird;;
 spotify)        wmctrl -s 2
-		/usr/bin/spotify;;
+		/var/lib/flatpak/exports/bin/com.spotify.Client;;
 thunar)         wmctrl -s 3
                 /usr/bin/thunar;;
 esac
