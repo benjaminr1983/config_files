@@ -16,8 +16,9 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term foot
-set $web firefox
+set $web flatpak run io.gitlab.librewolf-community
 set $mail thunderbird
+set $office libreoffice
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -26,7 +27,7 @@ set $menu exec wofi --show
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg ~/Pictures/01_linux/exar_kun_battle.jpg fill #000000
+output * bg ~/Pictures/01_linux/exar_kun_battle.jpg fill #000000
 output HDMI-A-1 resolution 1920x1080 position 0,0 
 output HDMI-A-2 resolution 1920x1080 position 1920,0 
 font pango: SourceCodePro Medium 12
@@ -51,9 +52,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 350
 # Example configuration:
 #
  exec swayidle -w \
-          timeout 600 'swaylock -f -s fit -i /home/exar/Pictures/01_linux/cheat_sheet.jpg' \
+          timeout 600 'swaylock -f -s fit -i ~/Pictures/01_linux/cheat_sheet.jpg' \
           timeout 1800 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'swaylock -f -s fit -i /home/exar/Pictures/01_linux/cheat_sheet.jpg'
+          before-sleep 'swaylock -f -s fit -i ~/Pictures/01_linux/cheat_sheet.jpg'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -85,6 +86,8 @@ input * accel_profile flat
     bindsym $mod2+b exec $web
     # start email   
     bindsym $mod2+m exec $mail
+    # start libreoffice
+    bindsym $mod2+l exec $office
     # file explorer
     bindsym $mod2+e exec thunar
     # shutdown
