@@ -1,0 +1,12 @@
+# location: /etc/systemd/system/
+[Unit]
+Description=OpenSSH Agent
+
+[Service]
+Type=simple
+Environment=SSH_AUTH_SOCK=/run/user/1000/ssh-agent.socket
+ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+User=brein
+
+[Install]
+WantedBy=multi-user.target
