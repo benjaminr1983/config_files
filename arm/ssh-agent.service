@@ -1,0 +1,12 @@
+# LOCATION: /etc/skel/.config/systemd/user/
+# LOCATION: $HOME/.config/systemd/user/
+[Unit]
+Description=OpenSSH Agent
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ssh-agent -D -a %t/ssh-agent.socket
+
+[Install]
+WantedBy=default.target
